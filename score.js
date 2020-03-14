@@ -6,19 +6,19 @@ function calculateScore(player) {
 
     case 'QB':
       return calculatePassing(player) + calculateRushing(player)
-      break
+
 
     case 'RB':
       return calculateRushing(player) + calculateReceiving(player) + calculateKickreturn(player) + calculatePuntreturn(player)
-      break
+
     case 'WR':
       return calculateRushing(player) + calculateReceiving(player) + calculateKickreturn(player) + calculatePuntreturn(player)
-      break
+
     case 'TE':
       return calculateReceiving(player)
-      break
+
     default: return 0
-      break
+
   }
   function calculatePassing(player) {
     const passingYards = player.stats.passing.yards / 25
